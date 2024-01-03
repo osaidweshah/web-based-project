@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Players</title>
+  </head>
+  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <header style="background-color: #333; color: white; text-align: center; padding: 1em;">
+      <h1>Football Players</h1>
+    </header>
+
+    <nav style="background-color: #444; overflow: hidden;">
+      <a href="project.html" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+      <a href="About us.html" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">About Us</a>
+      <a href="contact.html" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Contact Us</a>
+      <a href="reviews.html" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Reviews</a>
+      <a href="sitemap.html" style="float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Sitemap</a>
+    </nav>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us - Football Players Website</title>
+      
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+      <style>
+          body {
+              background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+              font-family: 'Open Sans', sans-serif;
+          }
+  
+          .contact-container {
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+              padding: 30px;
+              margin-top: 50px;
+          }
+  
+          .form-control {
+              border-radius: 5px;
+          }
+  
+          .btn-primary {
+              background-color: #007bff;
+              border-color: #007bff;
+          }
+  
+          .btn-primary:hover {
+              background-color: #0056b3;
+              border-color: #0056b3;
+          }
+  
+          .toast {
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              min-width: 300px;
+              max-width: 100%;
+              z-index: 1000;
+          }
+      </style>
+  </head>
+  
+  <body>
+  
+      <div class="container contact-container mt-md-5">
+          <div class="row">
+              <div class="col-md-8 offset-md-2">
+                  <h2 class="text-center mb-4">Contact Us</h2>
+                  <form id="contactForm" novalidate>
+                      <div class="form-group">
+                          <label for="name">Your Name:</label>
+                          <input type="text" class="form-control" id="name" name="name" required>
+                          <div class="invalid-feedback">
+                              Please enter your name.
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Your Email:</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                          <div class="invalid-feedback">
+                              Please enter a valid email address.
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="message">Message:</label>
+                          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                          <div class="invalid-feedback">
+                              Please enter your message.
+                          </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-block" onclick="validateAndSubmit()">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  
+      
+      
+  
+      <script>
+          function validateAndSubmit() {
+              var form = document.getElementById('contactForm');
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              } else {
+                  showToast('Form submitted successfully!', 'success');
+                  form.reset();
+              }
+              form.classList.add('was-validated');
+          }
+  
+          function showToast(message, type) {
+              var toast = document.getElementById('contactToast');
+              toast.innerHTML = message;
+              toast.className = 'toast show alert alert-' + type;
+              setTimeout(function () {
+                  toast.className = toast.className.replace('show', '');
+              }, 3000);
+          }
+      </script>
+  
+      
+      <div id="contactToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="500">
+          <div class="toast-body"></div>
+      </div>
+  
+      
+      <div class="container mt-5">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="card">
+                      
+                      <div class="card-body">
+                          <h5 class="card-title">Tariq</h5>
+                          <p class="card-text">Passionate about football strategy and analysis,
+                             Tariq brings a wealth of knowledge to our team. With a keen eye for player performance and game 
+                             tactics, he's an integral part of our football enthusiasts. Tariq is always ready to discuss the
+                              latest
+                             football matches and share his insights with fellow fans.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      
+                      <div class="card-body">
+                          <h5 class="card-title">Mohammed</h5>
+                          <p class="card-text">As our dedicated statistics analyst, Mohammed dives deep into player metrics
+                             and game statistics. His analytical skills help us uncover valuable insights about football
+                              players' performances. With a passion for data-driven decision-making, Mohammed contributes
+                               to making our football platform
+                             a go-to resource for fans seeking in-depth analysis and statistics</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      
+                      <div class="card-body">
+                          <h5 class="card-title">Osaid</h5>
+                          <p class="card-text">Osaid is our creative force, responsible for visually enhancing our football 
+                            platform. With a keen eye for design and user experience, he ensures that our website not only 
+                            provides valuable information but also delivers an engaging and visually appealing experience.
+                             From graphics to user interface design,
+                             Osaid adds a touch of creativity to our football enthusiasts' digital journey.
+
+  </body>
+</html>
